@@ -1,11 +1,12 @@
 import random
 
 print("Welcome to employee wage problem")
-employeeAttendance = random.randint(0, 2);
-empHrs = 0;
-RATE_PER_HOUR = 20;
-FULL_TIME = 1;
-PART_TIME = 2;
+
+empHrs = 0
+WORKING_DAYS = 20
+RATE_PER_HOUR = 20
+FULL_TIME = 1
+PART_TIME = 2
 
 
 def switch(attendance):
@@ -15,5 +16,7 @@ def switch(attendance):
     }.get(attendance, 0)
 
 
-empHrs = switch(employeeAttendance);
-print("Daily Wage = ", empHrs * RATE_PER_HOUR);
+for day in range(1, WORKING_DAYS):
+    employeeAttendance = random.randint(0, 2)
+    empHrs = empHrs + switch(employeeAttendance)
+print("Monthly Wage = ", empHrs * RATE_PER_HOUR)
