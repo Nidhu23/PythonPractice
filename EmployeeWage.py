@@ -7,8 +7,13 @@ RATE_PER_HOUR = 20;
 FULL_TIME = 1;
 PART_TIME = 2;
 
-if employeeAttendance == FULL_TIME:
-    empHrs = 8
-elif employeeAttendance == PART_TIME:
-    empHrs = 4
+
+def switch(attendance):
+    return {
+        FULL_TIME: 8,
+        PART_TIME: 4
+    }.get(attendance, 0)
+
+
+empHrs = switch(employeeAttendance);
 print("Daily Wage = ", empHrs * RATE_PER_HOUR);
