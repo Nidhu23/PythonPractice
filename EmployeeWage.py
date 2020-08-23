@@ -18,4 +18,4 @@ class WageComputation:
             total_days += 1
             employee_attendance = random.randint(0, 2)
             emp_hrs = emp_hrs + WageComputation.switch(employee_attendance)
-        print("Monthly Wage of employee in " + employee.COMP_NAME, emp_hrs * employee.rate_per_hr)
+        print("Monthly Wage of employee in " + employee.comp_name, emp_hrs * employee.rate_per_hr)

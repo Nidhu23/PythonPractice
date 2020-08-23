@@ -4,4 +4,4 @@ class Employee:
         self.rate_per_hr = rate_per_hr
         self.max_days = max_days
         self.max_hrs = max_hrs
-        self.COMP_NAME = comp_name
+        self.comp_name = comp_name
